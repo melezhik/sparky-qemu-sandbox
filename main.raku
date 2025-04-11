@@ -22,6 +22,6 @@ if tags()<reboot-ok> {
 
   my $job = Sparky::JobApi.new: :mine;
 
-  $j.put-stash({ need-reboot => True });
+  $job.put-stash({ need-reboot => True });
   
 }
