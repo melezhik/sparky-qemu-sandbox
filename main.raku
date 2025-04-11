@@ -20,7 +20,7 @@ if tags()<reboot-ok> {
 
   say "reboot required";
 
-  my $job = Sparky::JobApi.new: :mine;
+  my $job = Sparky::JobApi.new( api => "http://10.0.2.2:4000>" );
 
   $job.put-stash({ need-reboot => True });
   
