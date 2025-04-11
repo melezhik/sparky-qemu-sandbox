@@ -14,6 +14,8 @@ if tags()<reboot-ok> {
 
   bash "uptime";
 
+  say tags().raku;
+
   # task-run "files/bla/bla/bla";
 
   # ask sparky to reboot this VM
