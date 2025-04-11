@@ -10,7 +10,7 @@ if tags()<reboot-ok> {
 
 } else {
 
-  # this part of scenario is executed AFTER reboot
+  # this part of scenario is executed BEFORE reboot
 
   bash "uptime";
 
