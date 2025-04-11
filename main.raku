@@ -23,7 +23,7 @@ if tags()<reboot-ok> {
   my $job = Sparky::JobApi.new( 
     api => "http://10.0.2.2:4000",
     project  => tags()<parent_job_name>,
-    id => tags()<parent_job_id>,
+    job-id => tags()<parent_job_id>,
   );
 
   $job.put-stash({ need-reboot => True });
