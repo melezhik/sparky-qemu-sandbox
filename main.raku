@@ -23,7 +23,7 @@ if tags()<reboot-ok> {
   say "reboot required";
 
   my $job = Sparky::JobApi.new( 
-    api => "http://10.0.2.2:4000",
+    api => tags()<api>,
     project  => tags()<parent_job_name>,
     job-id => tags()<parent_job_id>,
   );
