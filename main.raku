@@ -22,5 +22,4 @@ if tags()<reboot-ok> {
 
   say "meta: reboot=need";
 
-  
 }
