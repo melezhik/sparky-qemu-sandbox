@@ -20,14 +20,7 @@ if tags()<reboot-ok> {
 
   # ask sparky to reboot this VM
 
-  say "reboot required";
+  say "meta: reboot=need";
 
-  my $job = Sparky::JobApi.new( 
-    api => "http://10.0.2.2:4000",
-    project  => tags()<parent_job_name>,
-    job-id => tags()<parent_job_id>,
-  );
-
-  $job.put-stash({ need-reboot => True });
   
 }
